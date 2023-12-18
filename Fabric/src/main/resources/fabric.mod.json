@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
   "id": "entityinformation",
-  "version": "3.1",
+  "version": "3.2",
 
   "name": "Entity Information",
   "description": "Displays entity information on hit with the Information Stick. Useful for debugging and developing. Usage: /informationstick or /ist",
   "authors": [ "Rick South" ],
   "contact": {
-    "homepage": "https://curseforge.com/minecraft/mc-mods/entity-information",
-    "sources": "https://github.com/ricksouth/serilum-mc-mod-sources/tree/main/sources/Entity%20Information",
-    "issues": "https://github.com/ricksouth/serilum-mc-mods/labels/Mod:%20Entity%20Information"
+    "homepage": "https://serilum.com/mod/entity-information",
+    "sources": "https://github.com/Serilum/Entity-Information",
+    "issues": "https://github.com/Serilum/.issue-tracker/labels/Mod:%20Entity%20Information"
   },
 
   "license": "All Right Reserved",
@@ -23,7 +23,7 @@
     "fabric": "*",
     "minecraft": ">=1.20",
     "java": ">=17",
-    "collective": ">=7.3"
+    "collective": ">=7.21"
   },
 
   "custom": {
