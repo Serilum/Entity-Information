@@ -1,9 +1,8 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.natamus.entityinformation.forge.mixin",
+  "package": "com.natamus.entityinformation.mixin",
   "compatibilityLevel": "JAVA_17",
-  "refmap": "entityinformation_forge.refmap.json",
   "mixins": [
 
   ],

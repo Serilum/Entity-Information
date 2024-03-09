@@ -3,7 +3,7 @@ package com.natamus.entityinformation.cmds;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
-import com.natamus.collective.functions.StringFunctions;
+import com.natamus.collective.functions.MessageFunctions;
 import net.minecraft.ChatFormatting;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
@@ -37,6 +37,6 @@ public class CommandIst {
 		ItemStack informationstick = new ItemStack(Items.STICK, 1);
 		informationstick.setHoverName(Component.literal(ChatFormatting.BLUE + "The Information Stick"));
 		player.addItem(informationstick);
-		StringFunctions.sendMessage(player, "You have been given The Information Stick!", ChatFormatting.BLUE);
+		MessageFunctions.sendMessage(player, "You have been given The Information Stick!", ChatFormatting.BLUE);
 	}
 }
