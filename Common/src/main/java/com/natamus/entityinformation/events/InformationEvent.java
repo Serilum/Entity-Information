@@ -1,6 +1,6 @@
 package com.natamus.entityinformation.events;
 
-import com.natamus.collective.functions.StringFunctions;
+import com.natamus.collective.functions.MessageFunctions;
 import net.minecraft.ChatFormatting;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.damagesource.DamageSource;
@@ -49,14 +49,14 @@ public class InformationEvent {
 		String isSilent = "isSilent: " + entity.isSilent();
 		String ticksExisted = "ticksExisted: " + entity.tickCount;
 
-		StringFunctions.sendMessage(player, "---- Entity Information:", ChatFormatting.BLUE, true);
-		StringFunctions.sendMessage(player, name, ChatFormatting.BLUE);
-		StringFunctions.sendMessage(player, entityName, ChatFormatting.BLUE);
-		StringFunctions.sendMessage(player, entityId, ChatFormatting.BLUE);
-		StringFunctions.sendMessage(player, UUID, ChatFormatting.BLUE);
-		StringFunctions.sendMessage(player, position, ChatFormatting.BLUE);
-		StringFunctions.sendMessage(player, isSilent, ChatFormatting.BLUE);
-		StringFunctions.sendMessage(player, ticksExisted, ChatFormatting.BLUE);
+		MessageFunctions.sendMessage(player, "---- Entity Information:", ChatFormatting.BLUE, true);
+		MessageFunctions.sendMessage(player, name, ChatFormatting.BLUE);
+		MessageFunctions.sendMessage(player, entityName, ChatFormatting.BLUE);
+		MessageFunctions.sendMessage(player, entityId, ChatFormatting.BLUE);
+		MessageFunctions.sendMessage(player, UUID, ChatFormatting.BLUE);
+		MessageFunctions.sendMessage(player, position, ChatFormatting.BLUE);
+		MessageFunctions.sendMessage(player, isSilent, ChatFormatting.BLUE);
+		MessageFunctions.sendMessage(player, ticksExisted, ChatFormatting.BLUE);
 		
 		return false;
 	}

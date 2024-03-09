@@ -1,8 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.natamus.entityinformation.neoforge.mixin",
-  "plugin": "com.natamus.collective.neoforge.mixin.plugin.NeoForgeMixinConfigPlugin",
+  "package": "com.natamus.entityinformation.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
 
