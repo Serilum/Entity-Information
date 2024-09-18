@@ -5,6 +5,7 @@ import com.natamus.entityinformation.events.InformationEvent;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 
@@ -21,5 +22,10 @@ public class ForgeInformationEvent {
 		if (!InformationEvent.onEntityDamage(livingEntity.level(), livingEntity, e.getSource(), e.getAmount())) {
 			e.setCanceled(true);
 		}
+	}
+
+	@SubscribeEvent
+	public void onPlayerRightClick(PlayerInteractEvent.RightClickItem e) {
+		InformationEvent.onStickUse(e.getEntity());
 	}
 }
