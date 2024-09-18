@@ -68,7 +68,8 @@ public class InformationEvent {
 		Vec3 lookTarget = eyePos.add(lookDirection);
 
 		Level world = player.level();
-		List<Entity> entities = world.getEntitiesOfClass(Entity.class, AABB.ofSize(player.position(), 20, 20, 20));
+		AABB searchArea = AABB.ofSize(player.position(), 2*range, 2*range, 2*range);
+		List<Entity> entities = world.getEntities(null, searchArea);
 
 		for(Entity e: entities) {
 			AABB bounds = e.getBoundingBox();
