@@ -4,11 +4,9 @@ import com.natamus.entityinformation.cmds.CommandIst;
 import com.natamus.entityinformation.events.InformationEvent;
 import net.minecraft.world.entity.LivingEntity;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 
-@EventBusSubscriber
 public class NeoForgeInformationEvent {
 	@SubscribeEvent
 	public static void registerCommands(RegisterCommandsEvent e) {
