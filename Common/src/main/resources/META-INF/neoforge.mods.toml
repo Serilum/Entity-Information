@@ -1,0 +1,37 @@
+modLoader="javafml"
+loaderVersion="*"
+license="All rights reserved"
+issueTrackerURL="https://github.com/Serilum/.issue-tracker/labels/Mod:%20Entity%20Information"
+logoFile="icon.png"
+
+[[mods]]
+modId="entityinformation"
+version="3.7"
+displayName="Entity Information"
+displayURL="https://serilum.com/mod/entity-information"
+authors="Rick South"
+description='''Displays entity information on hit with the Information Stick. Useful for debugging and developing. Usage: /informationstick or /ist
+'''
+credits='''Thank you very much to my Membership sponsors for supporting the development of this mod:  
+
+akanealw, Alister, Andrean Olgo, aternosorg, Cherriesaurus, MWS, t128, Tyler Behl, XAgent, ตัวตรึง พระนคร   
+
+If you would like to contribute too, check out https://serilum.com/donate. Appreciate it! <3   
+'''
+
+[[dependencies.entityinformation]]
+    modId="collective"
+    type="required"
+    versionRange="[8.17,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.entityinformation]]
+    modId="minecraft"
+    type="required"
+    versionRange="[26.1.2]"
+    ordering="NONE"
+    side="BOTH"
+
+[[mixins]]
+    config = "entityinformation.mixins.json"
