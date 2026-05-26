@@ -6,6 +6,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 
 public class NeoForgeInformationEvent {
 	@SubscribeEvent
@@ -19,5 +20,10 @@ public class NeoForgeInformationEvent {
 		if (!InformationEvent.onEntityDamage(livingEntity.level(), livingEntity, e.getSource(), e.getAmount())) {
 			e.setCanceled(true);
 		}
+	}
+
+	@SubscribeEvent
+	public static void onPlayerRightClick(PlayerInteractEvent.RightClickItem e) {
+		InformationEvent.onStickUse(e.getEntity());
 	}
 }

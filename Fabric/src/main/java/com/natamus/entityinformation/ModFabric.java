@@ -8,8 +8,13 @@ import com.natamus.entityinformation.events.InformationEvent;
 import com.natamus.entityinformation.util.Reference;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
+import net.fabricmc.fabric.api.event.player.UseItemCallback;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
 public class ModFabric implements ModInitializer {
@@ -35,6 +40,11 @@ public class ModFabric implements ModInitializer {
 
 		CollectiveEntityEvents.ON_LIVING_ATTACK.register((Level world, Entity entity, DamageSource damageSource, float damageAmount) -> {
 			return InformationEvent.onEntityDamage(world, entity, damageSource, damageAmount);
+		});
+
+		UseItemCallback.EVENT.register((Player player, Level world, InteractionHand hand) -> {
+			InformationEvent.onStickUse(player);
+			return InteractionResultHolder.pass(ItemStack.EMPTY);
 		});
 	}
 
