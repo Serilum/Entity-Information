@@ -1,4 +1,5 @@
 package com.natamus.entityinformation.events;
+import com.natamus.entityinformation.util.Reference;
 
 import com.natamus.collective.functions.MessageFunctions;
 import net.minecraft.ChatFormatting;
@@ -49,7 +50,7 @@ public class InformationEvent {
 		String isSilent = "isSilent: " + entity.isSilent();
 		String ticksExisted = "ticksExisted: " + entity.tickCount;
 
-		MessageFunctions.sendMessage(player, "---- Entity Information:", ChatFormatting.BLUE, true);
+		MessageFunctions.sendTranslatableMessage(player, "collective.entityinformation.message.msg", true, ChatFormatting.BLUE, Reference.NAME);
 		MessageFunctions.sendMessage(player, name, ChatFormatting.BLUE);
 		MessageFunctions.sendMessage(player, entityName, ChatFormatting.BLUE);
 		MessageFunctions.sendMessage(player, entityId, ChatFormatting.BLUE);
