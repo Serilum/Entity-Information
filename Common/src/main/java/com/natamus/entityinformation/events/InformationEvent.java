@@ -3,6 +3,7 @@ import com.natamus.entityinformation.util.Reference;
 
 import com.natamus.collective.functions.MessageFunctions;
 import net.minecraft.ChatFormatting;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
@@ -22,18 +23,17 @@ public class InformationEvent {
 			return true;
 		}
 		
-		if (!(source instanceof Player)) {
+		if (!(source instanceof Player player)) {
 			return true;
 		}
-		
-		Player player = (Player)source;
 
 		ItemStack mainhand = player.getItemInHand(InteractionHand.MAIN_HAND);
 		if (!mainhand.getItem().equals(Items.STICK)) {
 			return true;
 		}
 		
-		if (!mainhand.getHoverName().getString().equals(ChatFormatting.BLUE + "The Information Stick")) {
+		CompoundTag tag = mainhand.getTag();
+		if (tag == null || !tag.contains("informationstick")) {
 			return true;
 		}
 

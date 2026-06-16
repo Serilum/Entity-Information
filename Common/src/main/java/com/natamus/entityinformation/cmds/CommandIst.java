@@ -36,6 +36,7 @@ public class CommandIst {
 		
 		ItemStack informationstick = new ItemStack(Items.STICK, 1);
 		informationstick.setHoverName(Component.translatable("collective.entityinformation.gui.informationstick").withStyle(ChatFormatting.BLUE));
+		informationstick.getOrCreateTag().putBoolean("informationstick", true);
 		player.addItem(informationstick);
 		MessageFunctions.sendTranslatableMessage(player, "collective.entityinformation.message.giveninformationstick", ChatFormatting.BLUE);
 	}
