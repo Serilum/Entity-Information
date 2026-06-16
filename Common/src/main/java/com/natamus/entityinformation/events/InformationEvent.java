@@ -3,12 +3,15 @@ import com.natamus.entityinformation.util.Reference;
 
 import com.natamus.collective.functions.MessageFunctions;
 import net.minecraft.ChatFormatting;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.level.Level;
 
 public class InformationEvent {
@@ -22,18 +25,20 @@ public class InformationEvent {
 			return true;
 		}
 		
-		if (!(source instanceof Player)) {
+		if (!(source instanceof Player player)) {
 			return true;
 		}
-		
-		Player player = (Player)source;
 
 		ItemStack mainhand = player.getItemInHand(InteractionHand.MAIN_HAND);
 		if (!mainhand.getItem().equals(Items.STICK)) {
 			return true;
 		}
 		
-		if (!mainhand.getHoverName().getString().equals(ChatFormatting.BLUE + "The Information Stick")) {
+		CompoundTag marker = new CompoundTag();
+		marker.putBoolean("informationstick", true);
+
+		CustomData customData = mainhand.get(DataComponents.CUSTOM_DATA);
+		if (customData == null || !customData.matchedBy(marker)) {
 			return true;
 		}
 

@@ -8,10 +8,12 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.component.CustomData;
 
 public class CommandIst {
 	public static void register(CommandDispatcher<CommandSourceStack> dispatcher) {
@@ -37,6 +39,11 @@ public class CommandIst {
 		
 		ItemStack informationstick = new ItemStack(Items.STICK, 1);
 		informationstick.set(DataComponents.CUSTOM_NAME, Component.translatable("collective.entityinformation.gui.informationstick").withStyle(ChatFormatting.BLUE));
+
+		CompoundTag tag = new CompoundTag();
+		tag.putBoolean("informationstick", true);
+		informationstick.set(DataComponents.CUSTOM_DATA, CustomData.of(tag));
+
 		player.addItem(informationstick);
 		MessageFunctions.sendTranslatableMessage(player, "collective.entityinformation.message.giveninformationstick", ChatFormatting.BLUE);
 	}
