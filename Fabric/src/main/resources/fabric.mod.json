@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "id": "entityinformation",
-  "version": "3.9",
+  "version": "4.0",
 
   "name": "Entity Information",
   "description": "Displays entity information on hit with the Information Stick. Useful for debugging and developing. Usage: /informationstick or /ist",
-  "authors": [ "Rick South" ],
+  "authors": [ "Serilum" ],
   "contact": {
     "homepage": "https://serilum.com/mod/entity-information",
     "sources": "https://github.com/Serilum/Entity-Information",
@@ -16,14 +16,14 @@
   "icon": "icon.png",
 
   "environment": "*",
-  "entrypoints": { "main": [ "com.natamus.entityinformation.ModFabric" ] },
+  "entrypoints": { "main": [ "com.serilum.entityinformation.ModFabric" ] },
 
   "depends": {
     "fabricloader": ">=0.18.0",
     "fabric-api": "*",
     "minecraft": ">=26.3",
     "java": ">=25",
-    "collective": ">=8.39"
+    "collective": ">=8.40"
   },
 
   "custom": {
@@ -38,7 +38,7 @@
 	  " ",
 	  "Thank you very much to my Membership sponsors for supporting the development of this mod!",
 	  " ",
-	  "If you would like to contribute too, check out https://serilum.com/donate.",
+	  "If you would like to contribute too, check out https://serilum.com/donate",
 	  " ",
 	  "Membership sponsors:",
 	  " Andrean Olgo",
