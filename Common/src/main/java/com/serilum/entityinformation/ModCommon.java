@@ -1,8 +1,8 @@
-package com.natamus.entityinformation;
+package com.serilum.entityinformation;
 
 
 import com.natamus.collective.translations.ServerTranslationPack;
-import com.natamus.entityinformation.util.Reference;
+import com.serilum.entityinformation.util.Reference;
 
 public class ModCommon {
 

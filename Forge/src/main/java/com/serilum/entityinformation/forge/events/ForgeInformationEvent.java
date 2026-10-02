@@ -1,17 +1,17 @@
-package com.natamus.entityinformation.forge.events;
+package com.serilum.entityinformation.forge.events;
 
-import com.natamus.entityinformation.cmds.CommandIst;
-import com.natamus.entityinformation.events.InformationEvent;
+import com.serilum.entityinformation.cmds.CommandIst;
+import com.serilum.entityinformation.events.InformationEvent;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 public class ForgeInformationEvent {
-    @SubscribeEvent
-    public static void registerCommands(RegisterCommandsEvent e) {
-    	CommandIst.register(e.getDispatcher());
-    }
+	@SubscribeEvent
+	public static void registerCommands(RegisterCommandsEvent e) {
+		CommandIst.register(e.getDispatcher());
+	}
 
 	@SubscribeEvent
 	public static void onEntityDamage(LivingAttackEvent e) {
