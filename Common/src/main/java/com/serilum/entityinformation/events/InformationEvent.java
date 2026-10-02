@@ -1,5 +1,5 @@
-package com.natamus.entityinformation.events;
-import com.natamus.entityinformation.util.Reference;
+package com.serilum.entityinformation.events;
+import com.serilum.entityinformation.util.Reference;
 
 import com.natamus.collective.functions.MessageFunctions;
 import net.minecraft.ChatFormatting;
