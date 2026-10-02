@@ -1,9 +1,9 @@
-package com.natamus.entityinformation;
+package com.serilum.entityinformation;
 
 import com.natamus.collective.check.RegisterMod;
 import com.natamus.collective.check.ShouldLoadCheck;
-import com.natamus.entityinformation.forge.events.ForgeInformationEvent;
-import com.natamus.entityinformation.util.Reference;
+import com.serilum.entityinformation.forge.events.ForgeInformationEvent;
+import com.serilum.entityinformation.util.Reference;
 import net.minecraftforge.eventbus.api.bus.BusGroup;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
@@ -27,7 +27,7 @@ public class ModForge {
 	}
 
 	private void loadComplete(final FMLLoadCompleteEvent event) {
-    	ForgeInformationEvent.registerEventsInBus();
+		ForgeInformationEvent.registerEventsInBus();
 	}
 
 	private static void setGlobalConstants() {
