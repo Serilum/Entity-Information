@@ -1,7 +1,7 @@
-package com.natamus.entityinformation.neoforge.events;
+package com.serilum.entityinformation.neoforge.events;
 
-import com.natamus.entityinformation.cmds.CommandIst;
-import com.natamus.entityinformation.events.InformationEvent;
+import com.serilum.entityinformation.cmds.CommandIst;
+import com.serilum.entityinformation.events.InformationEvent;
 import net.minecraft.world.entity.LivingEntity;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.RegisterCommandsEvent;

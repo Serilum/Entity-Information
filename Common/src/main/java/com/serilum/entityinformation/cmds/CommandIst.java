@@ -1,4 +1,4 @@
-package com.natamus.entityinformation.cmds;
+package com.serilum.entityinformation.cmds;
 
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.context.CommandContext;

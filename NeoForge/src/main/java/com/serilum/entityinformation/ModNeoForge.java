@@ -1,9 +1,9 @@
-package com.natamus.entityinformation;
+package com.serilum.entityinformation;
 
 import com.natamus.collective.check.RegisterMod;
 import com.natamus.collective.check.ShouldLoadCheck;
-import com.natamus.entityinformation.neoforge.events.NeoForgeInformationEvent;
-import com.natamus.entityinformation.util.Reference;
+import com.serilum.entityinformation.neoforge.events.NeoForgeInformationEvent;
+import com.serilum.entityinformation.util.Reference;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
